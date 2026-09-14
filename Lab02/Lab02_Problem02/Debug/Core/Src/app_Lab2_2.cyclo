@@ -1,0 +1,3 @@
+../Core/Src/app_Lab2_2.c:22:6:App_Init	1
+../Core/Src/app_Lab2_2.c:28:6:App_MainLoop	1
+../Core/Src/app_Lab2_2.c:34:6:HAL_GPIO_EXTI_Callback	1
