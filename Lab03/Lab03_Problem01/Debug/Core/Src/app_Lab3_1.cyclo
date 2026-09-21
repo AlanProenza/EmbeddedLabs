@@ -1,0 +1,5 @@
+../Core/Src/app_Lab3_1.c:34:6:App_Init	1
+../Core/Src/app_Lab3_1.c:46:6:App_MainLoop	2
+../Core/Src/app_Lab3_1.c:53:6:HAL_UART_RxCpltCallback	5
+../Core/Src/app_Lab3_1.c:79:6:ShowCommands	1
+../Core/Src/app_Lab3_1.c:84:6:UART_TransmitString	2
