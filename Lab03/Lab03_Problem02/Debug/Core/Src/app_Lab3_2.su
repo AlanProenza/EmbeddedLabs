@@ -1,0 +1,6 @@
+../Core/Src/app_Lab3_2.c:34:6:App_Init	8	static
+../Core/Src/app_Lab3_2.c:46:6:App_MainLoop	8	static
+../Core/Src/app_Lab3_2.c:53:6:HAL_UART_RxCpltCallback	16	static
+../Core/Src/app_Lab3_2.c:79:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/app_Lab3_2.c:94:6:ShowCommands	8	static
+../Core/Src/app_Lab3_2.c:99:6:UART_TransmitString	24	static
