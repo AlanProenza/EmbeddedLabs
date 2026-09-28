@@ -1,0 +1,6 @@
+../Core/Src/app_Lab4_1.c:38:6:App_Init	1
+../Core/Src/app_Lab4_1.c:52:6:App_MainLoop	2
+../Core/Src/app_Lab4_1.c:70:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/app_Lab4_1.c:76:6:HAL_UART_RxCpltCallback	6
+../Core/Src/app_Lab4_1.c:106:6:ShowCommands	1
+../Core/Src/app_Lab4_1.c:112:6:UART_TransmitString	2
