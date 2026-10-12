@@ -1,7 +1,7 @@
 #MicroXplorer Configuration settings - do not modify
 ADC1.Channel-0\#ChannelRegularConversion=ADC_CHANNEL_3
 ADC1.CommonPathInternal=null|null|null|null
-ADC1.ContinuousConvMode=ENABLE
+ADC1.ContinuousConvMode=DISABLE
 ADC1.EOCSelection=ADC_EOC_SEQ_CONV
 ADC1.IPParameters=Rank-0\#ChannelRegularConversion,Channel-0\#ChannelRegularConversion,SamplingTime-0\#ChannelRegularConversion,OffsetNumber-0\#ChannelRegularConversion,NbrOfConversionFlag,EOCSelection,Overrun,ContinuousConvMode,master,CommonPathInternal
 ADC1.NbrOfConversionFlag=1
@@ -12,7 +12,7 @@ ADC1.SamplingTime-0\#ChannelRegularConversion=ADC_SAMPLETIME_2CYCLES_5
 ADC1.master=1
 ADC2.Channel-0\#ChannelRegularConversion=ADC_CHANNEL_3
 ADC2.CommonPathInternal=null|null|null|null
-ADC2.ContinuousConvMode=ENABLE
+ADC2.ContinuousConvMode=DISABLE
 ADC2.EOCSelection=ADC_EOC_SEQ_CONV
 ADC2.IPParameters=Rank-0\#ChannelRegularConversion,Channel-0\#ChannelRegularConversion,SamplingTime-0\#ChannelRegularConversion,OffsetNumber-0\#ChannelRegularConversion,NbrOfConversionFlag,ContinuousConvMode,EOCSelection,Overrun,CommonPathInternal
 ADC2.NbrOfConversionFlag=1

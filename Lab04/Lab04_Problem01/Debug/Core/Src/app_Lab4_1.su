@@ -1,6 +1,7 @@
-../Core/Src/app_Lab4_1.c:38:6:App_Init	8	static
-../Core/Src/app_Lab4_1.c:52:6:App_MainLoop	32	static
-../Core/Src/app_Lab4_1.c:70:6:HAL_TIM_PeriodElapsedCallback	16	static
-../Core/Src/app_Lab4_1.c:76:6:HAL_UART_RxCpltCallback	16	static
-../Core/Src/app_Lab4_1.c:106:6:ShowCommands	8	static
-../Core/Src/app_Lab4_1.c:112:6:UART_TransmitString	24	static
+../Core/Src/app_Lab4_1.c:36:6:App_Init	8	static
+../Core/Src/app_Lab4_1.c:49:6:App_MainLoop	4	static
+../Core/Src/app_Lab4_1.c:53:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/app_Lab4_1.c:59:6:HAL_ADC_ConvCpltCallback	40	static
+../Core/Src/app_Lab4_1.c:71:6:HAL_UART_RxCpltCallback	16	static
+../Core/Src/app_Lab4_1.c:101:6:ShowCommands	8	static
+../Core/Src/app_Lab4_1.c:107:6:UART_TransmitString	24	static

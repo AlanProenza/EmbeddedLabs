@@ -1,0 +1,7 @@
+../Core/Src/app_Lab5_1.c:48:6:App_Init	8	static
+../Core/Src/app_Lab5_1.c:65:6:App_MainLoop	4	static
+../Core/Src/app_Lab5_1.c:70:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/app_Lab5_1.c:84:6:HAL_ADC_ConvCpltCallback	24	static
+../Core/Src/app_Lab5_1.c:89:6:HAL_UART_RxCpltCallback	16	static
+../Core/Src/app_Lab5_1.c:115:6:ShowCommands	8	static
+../Core/Src/app_Lab5_1.c:120:6:UART_TransmitString	24	static

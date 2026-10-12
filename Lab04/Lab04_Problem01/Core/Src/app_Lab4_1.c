@@ -33,8 +33,6 @@ extern ADC_HandleTypeDef hadc1;
 volatile char rxData;  //One byte data received from UART
 volatile int ledMode = LED_MODE_FLASHING;
 
-volatile int takeSample = 0;
-
 void App_Init(void) {
 	HAL_GPIO_WritePin(LED_PORT, LED_PIN, GPIO_PIN_SET);
 
@@ -46,31 +44,30 @@ void App_Init(void) {
 
 	HAL_TIM_Base_Start_IT(&htim2);
 	HAL_UART_Receive_IT(&huart2, (uint8_t*) &rxData, 1); //Start the Rx interrupt.
-	HAL_ADC_Start(&hadc1);
 }
 
 void App_MainLoop(void) {
-	uint32_t adcResult = 0;
-	float mv;
-	char strBuffer[10];
-
-	if(takeSample != 0) {
-		takeSample = 0;
-
-		HAL_ADC_PollForConversion(&hadc1, 100);
-		adcResult = HAL_ADC_GetValue(&hadc1);
-
-		mv = ((float) adcResult)*3300.0/0x0FFF;
-		sprintf(strBuffer, "%7.2f", mv);
-		UART_TransmitString(&huart2, "ADC result (mv): ", 0);
-		UART_TransmitString(&huart2, strBuffer, 1);
-	}
+//ISR driven program, no main needed
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *p_htim) {
 	if (ledMode == LED_MODE_FLASHING) {
 		HAL_GPIO_TogglePin(LED_PORT, LED_PIN);
 	}
+}
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *p_hadc) {
+	uint32_t adcResult = HAL_ADC_GetValue(p_hadc);
+	float mv;
+
+	HAL_ADC_Stop_IT(p_hadc);
+
+	char strBuffer[10];
+	mv = ((float) adcResult)*3300.0/0x0FFF;
+
+	sprintf(strBuffer, "%7.2f", mv);
+	UART_TransmitString(&huart2, "ADC result (mv): ", 0);
+	UART_TransmitString(&huart2, strBuffer, 1);
 }
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *p_huart) {
@@ -96,7 +93,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *p_huart) {
 		break;
 	case 'S':
 	case 's':
-		takeSample = 1;
+		HAL_ADC_Start_IT(&hadc1);
 		break;
 	}
 
